@@ -1,0 +1,39 @@
+#エラーが出た。
+###実行環境：Manjaro Linux 18.0.4
+##内容
+　
+``` 
+avrdude: ser_open(): can't open device "/dev/ttyACM0" : Permission denied
+```
+とかいうやつ。
+
+
+要するにアクセス権限が無いということなんでしょう。
+
+
+実はこれインストールしてからずっとあったんですけど、管理者権限でArduino IDEを起動すれば書き込めていたのであまり気にしていませんでした。でも最近Arduinoを頻繁に使うようになったので一応対策しておきました。
+
+#解決策
+　
+```
+sudo usermod -a -G dialout <username>
+sudo chmod a+rw /dev/ttyACM0
+```
+ 公式さんはこれやっときゃいいよとか言ってたのですが、bashさんに「dialout？知らないねぇ...」と言われてしまいました。
+
+で、またググったところ
+
+[https://forum.arduino.cc/index.php?topic=495039.0:embed:cite]
+こちらにて
+```
+ls -l /dev/ttyACM
+```
+このコマンドで所属グループを表示できるっぽいので打ってみたところ、
+```
+ crw-rw-r-- 1 root uucp
+```
+という感じで、僕の場合dialoutじゃなくてuucpというグループにおった。
+
+あとはこれをさっきのコマンドのdialoutを書き換えてあげればおわり。
+
+これでArduinoくんがエラーを吐かずに書き込めるようにできました。
