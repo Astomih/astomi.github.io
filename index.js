@@ -1212,11 +1212,11 @@ function updateGlobalBufferAndViews(buf) {
 }
 
 var STATIC_BASE = 1024,
-    STACK_BASE = 5422976,
+    STACK_BASE = 5423008,
     STACKTOP = STACK_BASE,
-    STACK_MAX = 180096,
-    DYNAMIC_BASE = 5422976,
-    DYNAMICTOP_PTR = 179936;
+    STACK_MAX = 180128,
+    DYNAMIC_BASE = 5423008,
+    DYNAMICTOP_PTR = 179968;
 
 assert(STACK_BASE % 16 === 0, 'stack must start aligned');
 assert(DYNAMIC_BASE % 16 === 0, 'heap must start aligned');
@@ -1773,7 +1773,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
 
 
 
-// STATICTOP = STATIC_BASE + 179072;
+// STATICTOP = STATIC_BASE + 179104;
 /* global initializers */  __ATINIT__.push({ func: function() { ___wasm_call_ctors() } });
 
 
@@ -6553,7 +6553,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
     }
 
   function _emscripten_get_sbrk_ptr() {
-      return 179936;
+      return 179968;
     }
 
   function _emscripten_glActiveTexture(x0) { GLctx['activeTexture'](x0) }
