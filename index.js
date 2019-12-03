@@ -190,7 +190,7 @@ Module.expectedDataFileDownloads++;
   }
 
  }
- loadPackage({"files": [{"filename": "/nsk.png", "start": 0, "end": 939, "audio": 0}, {"filename": "/who.png", "start": 939, "end": 1470, "audio": 0}, {"filename": "/ball.png", "start": 1470, "end": 1752, "audio": 0}], "remote_package_size": 1752, "package_uuid": "9bff04d8-11b2-48cb-bddf-2b8fe4fdb310"});
+ loadPackage({"files": [{"filename": "/nsk.png", "start": 0, "end": 939, "audio": 0}, {"filename": "/who.png", "start": 939, "end": 1470, "audio": 0}, {"filename": "/ball.png", "start": 1470, "end": 1752, "audio": 0}, {"filename": "/mplus-1p-medium.ttf", "start": 1752, "end": 1747364, "audio": 0}, {"filename": "/256.png", "start": 1747364, "end": 1753003, "audio": 0}], "remote_package_size": 1753003, "package_uuid": "c1591b00-907e-4cdc-9217-7e1e9311653c"});
 
 })();
 
