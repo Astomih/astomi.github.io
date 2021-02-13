@@ -1,79 +1,93 @@
 /*
 	Initialize
 */
-body{
-	font:  'メイリオ', 'Meiryo';
-	font-weight: 300;
+body
+{
+	font-family: 'mplus-1p-regular';
 	-webkit-text-size-adjust:100%;
 	overflow-x: hidden;
 	color: #000;
 	background-color: #fff;
 }
 
-a{
+all
+{
 	color: #4682B1;
 	text-decoration: underline;
 }
 
-a:hover, .active{
+all:hover, .active
+{
   text-decoration: underline;
 }
 
-a:active, a:focus,input:active, input:focus{outline:0;}
+all:active, all:focus,input:active, input:focus
+{
+	outline:0;
+}
 
 
 /*
 	Image Config
 */
-#Astomih_jpg{
+#Astomih_jpg
+{
 	position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100px;
+	overflow: hidden;
+	width: 100%;
+	height: 100px;
 }
-#Astomih_jpg img{
+#Astomih_jpg img
+{
 	position: absolute;
-  left: 50%;
+	left: 50%;
 	max-width: 1280px;
-  width: 100px;
-  height: 100px;
-  margin-left: -50px;
+	width: 100px;
+	height: 100px;
+	margin-left: -50px;
 }
 
 /* 
 	Common
 */
-img{
+img
+{
 	max-width: 100%;
 	height: auto;
 }
-section{
+section
+{
 	clear:both;
-	padding-top: 70px;
+	padding-top: 0px;
 }
-section h1{
-	font-family: 'メイリオ';
+section h1
+{
+	font-family: 'mplus-1p-regular';
 	margin: 0 auto 40px;
-	font-size: 22px;
+	font-size: 32px;
 	font-weight:bold;
 	text-align: center;
 	background: #fff;
 }
-section h1 span {
+section h1 span 
+{
 }
-section h2{
-	font-family: 'メイリオ';
+section h2
+{
+	font-family: 'mplus-1p-regular';
 	margin: 0 auto 40px;
-	font-size: 22px;
+	font-size: 24px;
 	font-weight:normal;
 	text-align: center;
 	background: #fff;
 }
-section h2 span {
+section h2 span 
+{
 	background: #fff;
 	padding: 0 80px;
 }
-.inner{
+.inner
+{
 	width: 100%;
 	margin: 0 auto;
 	padding-bottom: 10px;
@@ -84,158 +98,188 @@ section h2 span {
 	Resposive Design Setting
 */
 
-@media only screen and (min-width: 1200px){
-	.inner{
+@media only screen and (min-width: 1200px)
+{
+	.inner
+	{
 		width: 1024px;
 	}
 }
 
-@media only screen and (min-width: 800px){
-	body{
+@media only screen and (min-width: 800px)
+{
+	body
+	{
 		font-size:14px;
 	}
 	
-  a#menu{
+	all#menu
+	{
 		display:none;
 	}	
 
-	.panel{
+	.panel
+	{
 		display:block !important;
 	}
 
-	#mainnav li{
+	#mainnav li
+	{
 		display: inline-block;
-		padding: 50px 25px;
 		font-size: 15px;
 	}
 	
-	
-	
-  #footer{
+	#footer
+	{
 		padding: 30px 10px 70px 0;
 	}
 }
 
 
-@media only screen and (min-width: 641px){
-	.col2 li{
+@media only screen and (min-width: 641px)
+{
+	.col2 li
+	{
 		width: 60%;
 		vertical-align: top;
 	}
-	.col2 li:first-child{
+	.col2 li:first-child
+	{
 		width: 35%;
 		padding-right: 4%;
 	}
 }
 
-@media only screen and (max-width: 640px){
-	.innerS{
+@media only screen and (max-width: 640px)
+{
+	.innerS
+	{
 		width: 94%;
 		padding-bottom: 70px;
 	}
-	.col3 li{
+	.col3 li
+	{
 		line-height: 1.7;
 	}
-	.col3 img{
+	.col3 img
+	{
 		margin: 0 auto;
 	}
-	.col3 .img{
+	.col3 .img
+	{
 		padding: 30px;
 		margin-bottom: 20px;
 	}
-	#gallery li{
+	#gallery li
+	{
 		float: none;
 		width: 100%;
 	}
-	#map iframe{
+	#map iframe
+	{
 		width: 96% !important;
 		left: 2%;
 	}
 }
 
-@media only screen and (max-width: 799px){
-	#header{
+@media only screen and (max-width: 799px)
+{
+	#header
+	{
 		position: fixed;
 		width: 100%;
 		z-index: 500;
 	}
 	
-	#headerWrap{
+	#headerWrap
+	{
 		position: relative;
 		width: 100%;
 		height: 70px;
 		background: #fff;
 	}
 	
-	#header h1{
+	#header h1
+	{
 		padding-top: 10px;
 	}
 	
-	#header h1 img{
+	#header h1 img
+	{
 		margin-top: 3px;
 		max-height: 45px;
 		width: auto !important;
 	}
 
-  a#menu{
-  	display: inline-block;
-  	position: relative;
-  	width: 40px;
-  	height: 40px;
-  	margin: 10px;
+	all#menu
+	{
+		display: inline-block;
+		position: relative;
+		width: 40px;
+	 	height: 40px;
+		margin: 10px;
 	}
 
-	#menuBtn{
-  	display: block;
-  	position: absolute;
-  	top: 60%;
-  	left: 50%;
-  	width: 18px;
-  	height: 2px;
-  	margin: -1px 0 0 -7px;
-  	background: #fff;
-  	transition: .2s;
+	#menuBtn
+	{
+		display: block;
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		width: 18px;
+		height: 2px;
+		margin: -1px 0 0 -7px;
+		background: #fff;
+		transition: .2s;
 	}
 
-	#menuBtn:before, #menuBtn:after{
-  	display: block;
-  	content: "";
-  	position: absolute;
-  	top: 50%;
-  	left: 0;
-  	width: 18px;
-  	height: 2px;
-  	background: #fff;
-  	transition: .3s;
+	#menuBtn:before, #menuBtn:after
+	{
+		display: block;
+	  	content: "";
+	  	position: absolute;
+	  	top: 50%;
+	  	left: 0;
+	  	width: 18px;
+	  	height: 2px;
+	  	background: #fff;
+	  	transition: .3s;
 	}
 
-	#menuBtn:before{
-  	margin-top: -7px;
+	#menuBtn:before
+	{
+  		margin-top: -7px;
 	}
 
-	#menuBtn:after{
-  	margin-top: 5px;
+	#menuBtn:after
+	{
+ 	 	margin-top: 5px;
 	}
 
-	a#menu .close{
-  	background: transparent;
+	all#menu .close
+	{
+ 	 	background: transparent;
 	}
 
-	a#menu .close:before, a#menu .close:after{
-  	margin-top: 0;
+	all#menu .close:before, all#menu .close:after
+	{
+ 	 	margin-top: 0;
 	}
 
-	a#menu .close:before{
-  	transform: rotate(-45deg);
-  	-webkit-transform: rotate(-45deg);
+	all#menu .close:before
+	{
+	  	transform: rotate(-45deg);
+	  	-webkit-transform: rotate(-45deg);
 	}
 
-	a#menu .close:after{
-  	transform: rotate(-135deg);
-  	-webkit-transform: rotate(-135deg);
+	all#menu .close:after
+	{
+	  	transform: rotate(-135deg);
+	  	-webkit-transform: rotate(-135deg);
 	}
 
-	.panel{
+	.panel
+	{
 		width: 100%;
 		display: none;
 		overflow: hidden;
@@ -245,7 +289,8 @@ section h2 span {
 		z-index: 100;
 	}
 
-	#mainnav{
+	#mainnav
+	{
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -253,13 +298,15 @@ section h2 span {
 		z-index:500;
 	}
 
-	#mainnav ul{
+	#mainnav ul
+	{
 		border-bottom: 1px solid #ccc;
 		background: #fff;
 		text-align: left;
 	}
 
-	#mainnav li a{
+	#mainnav li all
+	{
 		position: relative;
 		display:block;
 		padding:15px 25px;
@@ -268,7 +315,8 @@ section h2 span {
 		font-weight: 400;
 	}
 
-	#mainnav li a:before{
+	#mainnav li all:before
+	{
 		display: block;
 		content: "";
 		position: absolute;
@@ -282,21 +330,26 @@ section h2 span {
 		-webkit-transform: rotate(45deg);
 		transform: rotate(45deg);
 	}
-	#mainImg{
+	#mainImg
+	{
 		padding-top: 60px;
 		z-index: -100;
 	}
-	.col3 li{
+	.col3 li
+	{
 		margin: 50px auto 0 auto;
 		display: block;
 	}
-	section{
+	section
+	{
 		padding-top: 50px;
 	}
-	section h2{
+	section h2
+	{
 		margin: 0 auto 20px;
 	}
-	section h2 span {
+	section h2 span 
+	{
 		padding: 0 30px;
 	}
 }
