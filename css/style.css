@@ -1,6 +1,7 @@
 /*
 	Initialize
 */
+@import "{{ site.theme }}";
 body
 {
 	font-family: 'mplus-1p-regular';
