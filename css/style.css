@@ -1,7 +1,6 @@
 /*
 	Initialize
 */
-@import "{{ site.theme }}";
 body
 {
 	font-family: 'mplus-1p-regular';
@@ -13,7 +12,7 @@ body
 
 all
 {
-	color: #4682B1;
+	color: #124d7e;
 	text-decoration: underline;
 }
 
@@ -91,7 +90,7 @@ section h2 span
 {
 	width: 100%;
 	margin: 0 auto;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	font-size: 18px;
 }
 
@@ -132,7 +131,7 @@ section h2 span
 	
 	#footer
 	{
-		padding: 30px 10px 70px 0;
+		padding: 40px 10px 70px 0;
 	}
 }
 
