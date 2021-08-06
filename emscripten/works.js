@@ -5206,23 +5206,6 @@ var ASM_CONSTS = {
   }
   }
 
-  function ___sys_sendto(fd, message, length, flags, addr, addr_len) {try {
-  
-      var sock = getSocketFromFD(fd);
-      var dest = getSocketAddress(addr, addr_len, true);
-      if (!dest) {
-        // send, no address provided
-        return FS.write(sock.stream, HEAP8,message, length);
-      } else {
-        // sendto an address
-        return sock.sock_ops.sendmsg(sock, HEAP8,message, length, dest.addr, dest.port);
-      }
-    } catch (e) {
-    if (typeof FS === 'undefined' || !(e instanceof FS.ErrnoError)) abort(e);
-    return -e.errno;
-  }
-  }
-
   var ___sys_setsockopt=function(fd) {
     
     err('warning: unsupported syscall: __sys_setsockopt');try {
@@ -5884,7 +5867,6 @@ var asmLibraryArg = {
   "__sys_fcntl64": ___sys_fcntl64,
   "__sys_listen": ___sys_listen,
   "__sys_recvfrom": ___sys_recvfrom,
-  "__sys_sendto": ___sys_sendto,
   "__sys_setsockopt": ___sys_setsockopt,
   "__sys_socket": ___sys_socket,
   "abort": _abort,
