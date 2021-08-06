@@ -5234,10 +5234,6 @@ var ASM_CONSTS = {
       abort();
     }
 
-  function _emscripten_has_asyncify() {
-      return 0;
-    }
-
   function _emscripten_memcpy_big(dest, src, num) {
       HEAPU8.copyWithin(dest, src, src + num);
     }
@@ -5249,24 +5245,6 @@ var ASM_CONSTS = {
       var oldSize = HEAPU8.length;
       requestedSize = requestedSize >>> 0;
       abortOnCannotGrowMemory(requestedSize);
-    }
-
-  function _emscripten_sleep() {
-      throw 'Please compile your program with async support in order to use asynchronous operations like emscripten_sleep';
-    }
-
-  var _emscripten_get_now;if (ENVIRONMENT_IS_NODE) {
-    _emscripten_get_now = function() {
-      var t = process['hrtime']();
-      return t[0] * 1e3 + t[1] / 1e6;
-    };
-  } else _emscripten_get_now = function() { return performance.now(); }
-  ;
-  function _emscripten_thread_sleep(msecs) {
-      var start = _emscripten_get_now();
-      while (_emscripten_get_now() - start < msecs) {
-        // Do nothing.
-      }
     }
 
   var ENV={};
@@ -5870,11 +5848,8 @@ var asmLibraryArg = {
   "__sys_setsockopt": ___sys_setsockopt,
   "__sys_socket": ___sys_socket,
   "abort": _abort,
-  "emscripten_has_asyncify": _emscripten_has_asyncify,
   "emscripten_memcpy_big": _emscripten_memcpy_big,
   "emscripten_resize_heap": _emscripten_resize_heap,
-  "emscripten_sleep": _emscripten_sleep,
-  "emscripten_thread_sleep": _emscripten_thread_sleep,
   "environ_get": _environ_get,
   "environ_sizes_get": _environ_sizes_get,
   "fd_close": _fd_close,
