@@ -225,7 +225,6 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
-  - NenEngine/
 
 plugins:
   - jekyll-paginate
