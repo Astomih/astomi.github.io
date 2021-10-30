@@ -1,7 +1,7 @@
 ---
 layout: home
-title: Astomihの部屋
-subtitle: 惰性的な毎日
+title: A ROOM
+subtitle: 惰性的な日々
 ---
 
 # 自己紹介
