@@ -67,6 +67,9 @@ void Main::Update(float deltaTime)
 結果：
 ![結果]({{site.baseurl}}/assets/img/result.png)
 
+## 開発コード：NenGame
+開発中
+
 # 作ったもの
 取り敢えずGitHubにまとめています。  
 [https://github.com/astomih/Works](https://github.com/astomih/Works)  
