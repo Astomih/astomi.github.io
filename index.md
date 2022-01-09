@@ -19,12 +19,12 @@ astomih.jp@gmail.com
 
 
 # 作っているもの
-## NenEngine
+## sinen
 C++20がメインのWindows/Android/Webに対応中のVulkan/OpenGLバックエンドな2D/3Dライブラリ(長い)
  
-[https://github.com/astomih/NenEngine](https://github.com/astomih/NenEngine)  
+[https://github.com/astomih/sinen](https://github.com/astomih/sinen)  
   
-[APIリファレンス](https://astomih.github.io/NenEngine)  
+[APIリファレンス](https://astomih.github.io/sinen)  
   
 ### コード例
 ``` c++
