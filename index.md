@@ -1,13 +1,13 @@
 ---
 layout: home
-title: 
+title: ホームページ的な何か
 subtitle: 惰性的な日々
 ---
 
 # ブログ
-[https://astomih.hatenablog.com/](https://astomih.hatenablog.com/)  
+[astomih.hatenablog.com](https://astomih.hatenablog.com/)  
 # ツイッター
-[@Astomih](https://twitter.com/Astomih)  
+[@astomih](https://twitter.com/Astomih)  
 # GitHub
 [GitHub](https://github.com/Astomih)  
 # メール
