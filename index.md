@@ -1,6 +1,6 @@
 ---
 layout: home
-title: ホームページ的な何か
+title: HOMEPAGE
 subtitle: 惰性的な日々
 ---
 
