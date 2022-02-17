@@ -31,7 +31,7 @@ github_username:  astomih
 theme: minima
 plugins:
   - jekyll-feed
-gtag: "G-E9XLNVL176"
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
