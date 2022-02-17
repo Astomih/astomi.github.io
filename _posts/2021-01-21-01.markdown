@@ -1,0 +1,27 @@
+---
+layout: post
+title:  "VisualStudioのプロジェクトをコマンドラインからビルドする"
+categories: VisualStudio C++
+---
+新年です。だからなにって訳ではないですが。  
+  
+最近、コマンドラインからビルドしたいなーと思っていて調べたところMSBuildというのが使えるらしい。  はてなブログタグに登録されているくらい。
+場所は  
+```  
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\
+```  
+にある。(2019は任意のバージョン) 面倒なのでとりあえず環境変数に打ち込んだ。  
+  
+MSBuild.exeをターミナルから実行できるのを確認したら、↓こんな感じにビルドすることができる。
+```
+MSBuild C:/hoge/fuga/piyo.sln /t:build /p:Configuration=Debug;Platform="x86"
+```
+ソリューションに複数のプロジェクトがある場合は/t:にbuild、任意のプロジェクトをビルドしたいときにはプロジェクト名に変更することでビルド可能。  
+その他ConfigurationとPlatformは見ての通りで、これでおそらく最低限はビルド可能になる。  
+  
+それ以外のコマンドは公式ドキュメントを読んでください。結局デバッガなどを使用するとなるとVisual Studioを起動する羽目にはなると思います。  
+
+[https://docs.microsoft.com/ja-jp/visualstudio/msbuild/msbuild-reference?view=vs-2019]() 
+毎回打つのは面倒なのでaliasに登録してるんですが、makefileみたいになんかもっとスマートに出来ると思うのでよければ教えて下さい。  
+  
+追記：調べたところ、nmakeというのがやっぱりあるらしい。書き方もmakefileに似ているので、今後書く予定。

@@ -1,0 +1,51 @@
+---
+layout: post
+title:  【Arduino】エラー「Exception in thread "EventThread /dev/ttyACM0"...」の対処法
+categories: Linux Arduino
+---
+
+前回に続いて、またArduinoに躓いたので対処法を記載。
+## 環境
+Manjaro Linux
+##エラー内容・対処法
+ArduinoでソースコードのコンパイルとICへの書き込みは出来るのに、シリアルモニタとプロッタが開けない状態。
+
+```
+Exception in thread "EventThread /dev/ttyACM0" java.lang.NoSuchMethodError: java.nio.ByteBuffer.flip()Ljava/nio/ByteBuffer;
+at processing.app.Serial.serialEvent(Serial.java:185)
+at jssc.SerialPort$LinuxEventThread.run(SerialPort.java:1299)
+```
+例によってコミュニティに書いてありました。
+[https://forum.arduino.cc/index.php?topic=621098.0:embed:cite]
+
+openJDKのバージョンが古いらしく、java11にバージョンを上げれば良いそうです。
+```
+archlinux-java status
+```
+ディストリビューションによって異なりますが、ArchLinux系の場合はこのコマンドで現在のJava環境の確認が出来ます。
+```
+archlinux-java status
+Available Java environments:
+  java-8-openjdk (default)
+```
+
+java-8-openjdk(default)みたいな感じでバージョン11以前のものがdefaultならそれが原因です。
+あとはopenjdk-11をインストールするだけです。
+
+```
+sudo pacman -Syu jre11-openjdk
+```
+パッケージ名が見つからない場合は、「OpenJDK11」で検索して該当するパッケージをインストールしてください。
+次に、java statusを設定。
+```
+ sudo archlinux-java set java-11-openjdk
+```
+さっきのステータスがjava-11-openjdkになっていることを確認。
+```
+ archlinux-java status
+Available Java environments:
+  java-11-openjdk (default)
+  java-8-openjdk
+```
+java11がデフォルトになっていれば、私の環境では上手くいきました。
+ArduinoIDEを再起動すれば無事にシリアルモニタを起動できます。

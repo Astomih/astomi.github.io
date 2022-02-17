@@ -1,0 +1,125 @@
+---
+layout: post
+title:  "QtでUpdate関数を実装する"
+categories: C++ Qt
+---
+##目的
+
+C++向けGUIライブラリ Qt には毎回実行されるような関数は用意されていない。
+
+しかし、Qtにはシグナルとスロットという仕組みが存在し、それを使って自前で簡単に実装することが可能であることを知ったので記しておく。
+
+
+
+## シグナルとスロット
+
+シグナル及びスロットを詳しく知りたい場合は、Qtの公式リファレンスか、Qiitaなどにいくつかサイトを見つけたのでそちらを参照すると良い。  
+[https://doc.qt.io/qt-5/reference-overview.html]()  
+簡単に言えば、シグナルはスロットを作動させるための信号で、スロットは関数である。
+
+
+## 	実装
+
+今回のupdate関数は、一定時間ごとに呼び出すのでQTimerクラスを使って時間を計測し、シグナルを送信させる。
+
+まずは適当なクラスにQTimerクラスのポインタを作る。
+
+``` cpp
+//QtWidgetApplication1.h
+#pragma once
+#include <QtWidgets/QMainWindow>
+#include "ui_QtWidgetsApplication1.h"
+
+class QtWidgetsApplication1 : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    QtWidgetsApplication1(QWidget *parent = Q_NULLPTR);
+    ~QtWidgetsApplication1();
+private:
+    Ui::QtWidgetsApplication1Class ui;
+    class QTimer* my_timer;
+};
+```
+
+今回は、プロジェクトを作成したときの最初のクラスに作る。
+
+次にスロットのプロトタイプを作成する。
+
+``` cpp
+//QtWidgetApplication1.h
+#pragma once
+#include <QtWidgets/QMainWindow>
+#include "ui_QtWidgetsApplication1.h"
+
+class QtWidgetsApplication1 : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    QtWidgetsApplication1(QWidget *parent = Q_NULLPTR);
+    ~QtWidgetsApplication1();
+    
+public slots:
+    void update();
+
+private:
+    Ui::QtWidgetsApplication1Class ui;
+    class QTimer* my_timer;
+};
+```
+
+真ん中のvoid update();がスロットである。public にslotsを加えなければならない事に注意が必要である。
+
+
+
+update関数には一定周期で実行したい処理を実装しておく。試しに今回は、QLineEditウィジェットを作成し、経過時間を表示させる。
+
+![](/assets/20200814162130.png)
+
+次に、中身を書く。
+
+コンストラクタには、my_timerの実体を生成と、シグナルとスロットの接続 ( connect ) を行っている。
+
+connectの引数は第一引数から順番に(シグナル送信元、シグナル、シグナル送信先（受信者）、スロット)である。
+
+今回の場合、my_timerがシグナルが送信元となり、timeout()が呼ばれるタイミングで送信される。timeout()は、QTimerが0になった時に呼ばれる。
+
+シグナルの受信者はQtWidgetApplication1クラス、スロットはupdate()である。
+
+つまり、これでmy_timerが0になるたびにupdate()が呼ばれるようになった。
+
+次にmy_timerをスタートさせる。引数にはタイマーの時間 (ms) をセットする。my_timerはtimeout()が呼ばれるたびに100になり、以後自動的にスタートする。
+
+``` cpp
+//QtWidgetApplication1.cpp
+#include "QtWidgetsApplication1.h"
+#include <QtGui>
+#include <iostream>
+
+QtWidgetsApplication1::QtWidgetsApplication1(QWidget *parent)
+    : QMainWindow(parent)
+{
+    ui.setupUi(this);
+    my_timer = new QTimer();
+    connect(my_timer, SIGNAL(timeout()), this, SLOT(update()));
+    my_timer->start(100);
+}
+QtWidgetsApplication1::~QtWidgetsApplication1()
+{
+    delete my_timer;
+}
+void QtWidgetsApplication1::update()
+{
+    static uint32_t time = 0;
+    time += 100;
+    ui.lineEdit->setText(std::to_string(time).c_str());
+}
+
+```
+
+
+
+実行させると以下のように値が増加し、update関数が完成した。
+![](/assets/20200814162136.png)

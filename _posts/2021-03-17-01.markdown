@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "ゲーム制作向けライブラリを公開した"
+categories: C++ OpenGL Vulkan
+---
+
+ドキュメントも何もないし一人で使う予定なので公開と言えるのか分からないが、ゲーム制作に使う用のライブラリを公開した。  
+
+
+[https://github.com/astomih/sinen](https://github.com/astomih/sinen)
+
+
+sinenの名前の由来は「思念」から。あとアイヌ語で「一人」の意味もあるらしいので丁度良かった。
+DXライブラリよりも少し抽象度の低いあたりを目指している。主にSDL2を中心としており、描画部分はOpenGLかVulkanが担う.  

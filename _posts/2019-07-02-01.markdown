@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "【Arduino】エラー「can't open device \"/dev/ttyACM0\" : Permission denied」の対処法"
+categories: Linux Arduino
+---
+# エラーが出た。
+### 実行環境：Manjaro Linux 18.0.4
+## 内容
+　
+``` 
+avrdude: ser_open(): can't open device "/dev/ttyACM0" : Permission denied
+```
+とかいうやつ。
+
+
+要するにアクセス権限が無いということなんでしょう。 
+Linuxに慣れているならすぐに解決できそうですが、初心者なので嵌りました。  
+
+実はこれインストールしてからずっとあったんですけど、管理者権限でArduino IDEを起動すれば書き込めていたのであまり気にしていませんでした。でも最近Arduinoを頻繁に使うようになったので一応対策しておきました。 
+
+# 解決策
+　
+```
+sudo usermod -a -G dialout <username>
+sudo chmod a+rw /dev/ttyACM0
+```
+ 公式サイトではこれで解決するらしいが、出来なかった。どうやらグループが異なるようです。
+
+仕方が無いので、再びググり申した結果...
+
+[https://forum.arduino.cc/index.php?topic=495039.0](https://forum.arduino.cc/index.php?topic=495039.0)  
+こちらにて  
+```
+ls -l /dev/ttyACM
+```
+このコマンドで所属グループを表示できるっぽいので打ってみる。すると、
+```
+ crw-rw-r-- 1 root uucp
+```
+という感じで、自分の環境だとdialoutじゃなくてuucpというグループだったようでした。  
+あとはこれをさっきのコマンドのdialoutを書き換えてあげます。  
+これでArduinoがエラーを吐かずに書き込めるようにできました。  
