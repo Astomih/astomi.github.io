@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EffekseerをEmscriptenで動かす その１ ビルド編"
-categories: Emscripten
+tags: Emscripten
 ---
 # はじめに  
 やり方としては２種類ある。（多分）  

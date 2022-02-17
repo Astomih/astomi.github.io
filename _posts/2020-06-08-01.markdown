@@ -1,7 +1,7 @@
 ---
 layout: post
 title: std::shared_ptr<T>でthisポインタを渡す
-categories: C++
+tags: C++
 ---
 # はじめに
 以下のコードはデストラクタが二回呼ばれて二重解放してしまいます。

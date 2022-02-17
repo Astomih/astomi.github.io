@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VSCodeとWindows TerminalでDeveloper PowerShellを起動する"
-categories: VSCode windows
+tags: VSCode windows
 ---
 #TL;DR
 ## Windows Terminal

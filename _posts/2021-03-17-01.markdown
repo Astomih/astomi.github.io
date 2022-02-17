@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "ゲーム制作向けライブラリを公開した"
-categories: C++ OpenGL Vulkan
+tags: C++ OpenGL Vulkan
 ---
 
 ドキュメントも何もないし一人で使う予定なので公開と言えるのか分からないが、ゲーム制作に使う用のライブラリを公開した。  

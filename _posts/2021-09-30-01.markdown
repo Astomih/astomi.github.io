@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "EffekseerをEmscriptenで動かす その2 ファイルローダ編"
-categories: Emscripten
+tags: Emscripten
 ---
 
 前回、ファイルローダがどうのこうの言ってから２ヶ月が経過してしまった。  

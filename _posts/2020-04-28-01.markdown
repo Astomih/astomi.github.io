@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WSL起動時のディレクトリをUbuntu18.04のホームディレクトリにする
-categories: Linux Windows
+tags: Linux Windows
 ---
 
 #経緯

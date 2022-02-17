@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Vulkan メモ"
-categories: C++ Vulkan
+tags: C++ Vulkan
 ---
 この記事は落書きです.  
 Vulkanに関する日本語の情報が少ないので、落書きでももしかしたら需要あるかもしれんので公開することに.  

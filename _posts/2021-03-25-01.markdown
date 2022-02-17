@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "OpenAL実装ライブラリ、MojoAL"
-categories: C++ OpenAL
+tags: C++ OpenAL
 ---
 オーディオAPIとして有名なOpenALは、扱いやすくて人気があるがライセンスがLGPLなので扱いが難しい。  
 そこで近年、zlibライセンスで開発されているオープンソースのSDL2上でOpenALのAPIが実装された。  

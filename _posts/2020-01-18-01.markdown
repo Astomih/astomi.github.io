@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Dell Inspiron 14 5485を買った
-categories: レビュー
+tags: レビュー
 ---
 ５万円未満でノートpcを購入した。  
 元が何万か忘れたけど、学割でいろいろやったら５万切っていた。  

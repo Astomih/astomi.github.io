@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  wineの不具合を解消する
-categories: Linux
+tags: Linux
 ---
 Elonaというフリーゲームをやりたくなったので、ManjaroLinuxにwine（windowsエミュレータ）をダウンロード。
 すんなり実行はしたものの、MIDIが鳴らなかったり終了時にプロセスが残ってしまうなどの現象が発生。

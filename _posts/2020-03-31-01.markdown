@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  VisualStudio2019で文字コードをUTF-8にして保存・実行する
-categories: VisualStudio
+tags: VisualStudio
 ---
 ## 経緯
 最近、SDL2.0を使ってゲームを作っているが、文字の描画に使用しているSDL_ttfで日本語が表示されなかった。

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "【Arduino】エラー「can't open device \"/dev/ttyACM0\" : Permission denied」の対処法"
-categories: Linux Arduino
+tags: Linux Arduino
 ---
 # エラーが出た。
 ### 実行環境：Manjaro Linux 18.0.4

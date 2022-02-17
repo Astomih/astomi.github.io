@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "DockerでFactorioサーバーを建てるメモ"
-categories: Docker Factorio Linux
+tags: Docker Factorio Linux
 ---
 # 結論
 ```

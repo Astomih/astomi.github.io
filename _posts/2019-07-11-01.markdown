@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  【Arduino】エラー「Exception in thread "EventThread /dev/ttyACM0"...」の対処法
-categories: Linux Arduino
+tags: Linux Arduino
 ---
 
 前回に続いて、またArduinoに躓いたので対処法を記載。

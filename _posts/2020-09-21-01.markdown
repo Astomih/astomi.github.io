@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual Studio Code のターミナルでDeveloper Command Prompt を起動する
-categories: C++ VSCode
+tags: C++ VSCode
 ---
 # なぜ？
 いちいちVisual Studio を毎回起動するのがめんどくさくなってきた。だらだらアニメでも見ながらプログラムを組みたいときだってある。  

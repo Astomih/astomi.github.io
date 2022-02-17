@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Vimの行末の「^M」を消す
-categories: Linux Vim
+tags: Linux Vim
 ---
 
 VSCodeなどで編集した後にVimで開くと^Mみたいのが行末に表示されて鬱陶しいので消し方のメモを残しておく。

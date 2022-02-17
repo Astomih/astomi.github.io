@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  【Linux】デバイスのマウント方法
-categories: Linux
+tags: Linux
 ---
 デバイスのマウント方法を毎回忘れてしまうので調べなおすのが面倒くさい。
 メモ帳代わりにブログで書きなぐることにしました。

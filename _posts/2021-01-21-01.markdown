@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VisualStudioのプロジェクトをコマンドラインからビルドする"
-categories: VisualStudio C++
+tags: VisualStudio C++
 ---
 新年です。だからなにって訳ではないですが。  
   

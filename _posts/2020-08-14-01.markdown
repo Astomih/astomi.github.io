@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "QtでUpdate関数を実装する"
-categories: C++ Qt
+tags: C++ Qt
 ---
 ##目的
 
