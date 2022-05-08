@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: 惰性Log
+title: astomih
 
 # Your name to show in the footer
 author: astomih
@@ -39,10 +39,10 @@ author: astomih
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  email: "astomih@gmail.com"
-  github: astomih
-  twitter: astomih
+#rss: true  # remove this line if you don't want to show an RSS link at the bottom
+#  email: "astomih@gmail.com"
+#  github: astomih
+# twitter: astomih
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -53,7 +53,7 @@ social-network-links:
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
-#  twitch: yourname
+#twitch: astomih
 #  yelp: yourname
 #  telegram: yourname
 #  calendly: yourname
@@ -82,10 +82,10 @@ url-pretty: "astomih.github.io"
 excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: true
+feed_show_excerpt: false
 
 # Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: true
+feed_show_tags: false
 
 # Add a search button to the navbar
 post_search: false
