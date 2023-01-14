@@ -13,5 +13,5 @@ layout: "default"
 [SoundCloud](https://soundcloud.com/astomih)  
 [Twitter](https://twitter.com/astomih/)  
 [Twitch](https://www.twitch.tv/astomih/)  
-[YouTube](https://www.youtube.com/channel/UC5CYsyCPDpDQ7mo50cTzruQ)  
+[YouTube](https://www.youtube.com/@astomih)  
 [astomih.jp@gmail.com](mailto:astomih.jp@gmail.com)  
