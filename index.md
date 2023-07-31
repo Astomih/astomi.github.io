@@ -8,5 +8,5 @@ layout: "default"
 {: align="center"}
 [Blog](https://astomih.hatenablog.com/)  
 [GitHub](https://github.com/astomih/)  
-[Twitter](https://twitter.com/astomih/)  
+[𝕏](https://x.com/astomih/)  
 [astomih.jp@gmail.com](mailto:astomih.jp@gmail.com)  
