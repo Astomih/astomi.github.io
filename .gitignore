@@ -11,7 +11,3 @@ ehthumbs.db
 Gemfile.lock
 
 beautiful-jekyll-theme-*.gem
-
-#User
-*.code-workspace
-.jekyll-cache

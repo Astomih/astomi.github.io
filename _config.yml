@@ -1,48 +1,64 @@
-# Welcome to Beautiful Jekyll!
-# This config file is meant for settings that affect your entire website. When you first
-# set up your website you should go through all these settings and edit them, but after
-# the initial set up you won't need to come back to this file often.
+###########################################################
+### Welcome to Beautiful Jekyll!
+### This config file is meant for settings that affect your entire website. When you first
+### set up your website you should go through all these settings and edit them, but after
+### the initial set up you won't need to come back to this file often.
+###########################################################
 
+############################
 # --- Required options --- #
+############################
 
 # Name of website
-title: astomih
+title: 
 
 # Your name to show in the footer
 author: astomih
 
+###############################################
 # --- List of links in the navigation bar --- #
+###############################################
 
-#navbar-links:
-#  About Me: "aboutme"
-#  Resources:
-#    - Beautiful Jekyll: "https://beautifuljekyll.com"
-#    - Learn markdown: "https://www.markdowntutorial.com/"
-#  Author's home: "https://deanattali.com"
+navbar-links:
+  ABOUT ME: "aboutme"
+  WORKS: "works"
+  TECH BLOG: "https://astomih.hatenablog.com/"
+  DIARY: "https://astomih.hatenadiary.jp/"
+    #  Resources:
+    #- Beautiful Jekyll: "https://beautifuljekyll.com"
+    #- Learn markdown: "https://www.markdowntutorial.com/"
+  #Author's home: "https://deanattali.com"
 
+################
 # --- Logo --- #
+################
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-#avatar: "/assets/img/astomih.jpg"
+avatar: "/assets/img/astomih.jpg"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
-#round-avatar: true
+round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: "/assets/img/astomih.jpg"
+#title-img: /assets/img/astomih.jpg
 
 
+#####################################
 # --- Footer social media links --- #
+#####################################
 
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-#rss: true  # remove this line if you don't want to show an RSS link at the bottom
-#  email: "astomih@gmail.com"
-#  github: astomih
-# twitter: astomih
+  email: "astomih@gmail.com"
+  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+#  facebook: 
+  github: astomih
+  twitter: astomih
+#  patreon: DeanAttali
+  youtube: "@astomih"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -53,26 +69,31 @@ social-network-links:
 #  spotify: yourname
 #  telephone: +14159998888
 #  steam: deanat78
-#twitch: astomih
+#  twitch: yourname
 #  yelp: yourname
 #  telegram: yourname
 #  calendly: yourname
 #  mastodon: instance.url/@username
 #  ORCID: your ORCID ID
 #  google-scholar: your google scholar
+#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
+#  kaggle: yourname
+#  hackerrank: yourname
 
-# If you want to show a link to an RSS in the footer, add the site description here.
-# If you don't want to show an RSS link, remove the following line.
-rss-description: This website is a virtual proof that I'm awesome
+# If you want your website to generate an RSS feed, provide a description
+# The URL for the feed will be https://<your_website>/feed.xml
+rss-description: astomih's page 
 
+###########################
 # --- General options --- #
+###########################
 
 # Select which social network share links to show in posts
 share-links-active:
-  #twitter: true
-  #facebook: true
-  #linkedin: true
-  #vk: false
+  twitter: false
+  facebook: false
+  linkedin: false
+  vk: false
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
@@ -82,18 +103,28 @@ url-pretty: "astomih.github.io"
 excerpt_length: 50
 
 # Whether or not to show an excerpt for every blog post in the feed page
-feed_show_excerpt: false
+feed_show_excerpt: true
 
 # Whether or not to show a list of tags below each post preview in the feed page
-feed_show_tags: false
+feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: false
+post_search: true
+
+# Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
+edit_page_button: true
+
+# Allow sub-menu items (second-level navigation menu items) to be longer than the top-level menu
+# If this setting is off, then long sub-menu words might get cut off
+# See https://github.com/daattali/beautiful-jekyll/issues/765 to understand the issue this setting can solve
+navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
 #keywords: "my,list,of,keywords"
 
+######################################
 # --- Colours / background image --- #
+######################################
 
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
@@ -107,6 +138,7 @@ hover-col: "#0085A1"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
+footer-hover-col: "#0085A1"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
@@ -126,13 +158,12 @@ footer-link-col: "#404040"
 #site-js:
 #  - "/assets/js/custom-script.js"
 
+#################################
 # --- Web Analytics Section --- #
+#################################
 
-# Fill in your Google Analytics gtag.js ID to track your website using gtag
-gtag: "G-E9XLNVL176"
-
-# Fill in your Google Analytics ID to track your website using Google Analytics
-#google_analytics: ""
+# Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
+#gtag: "G-XXXXXXXXXX"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
@@ -148,13 +179,23 @@ gtag: "G-E9XLNVL176"
 #  uri: "demo.wiki.pro"
 #  opt-out: true
 
+# Google Universal Analytics ID -- deprecated
+# As of July 2023 this is no longer supported by Google! If you are still using `google_analytics`,
+# you should switch to using the `gtag` field above instead.
+#google_analytics: "UA-XXXXXXXX-X"
+
+####################
 # --- Comments --- #
+####################
 
 # To use Disqus comments, sign up to https://disqus.com and fill in your Disqus shortname (NOT the userid)
 #disqus: ""
 
 # To use Facebook Comments, create a Facebook app and fill in the Facebook App ID
 #fb_comment_id: ""
+
+# To use CommentBox, sign up for a Project ID on https://commentbox.io
+#commentbox: "" # Project ID, e.g. "5694267682979840-proj"
 
 # To use Utterances comments: (0) uncomment the following section, (1) fill in
 # "repository" (make sure the repository is public), (2) Enable Issues in your repository,
@@ -180,15 +221,35 @@ gtag: "G-E9XLNVL176"
 #    siteKey  : # You need to apply for a site key on Google
 #    secret   : # Encrypt your password by going to https://<your-own-api>/v3/encrypt/<your-site-secret>
 
+# To use giscus comments:
+# (0) Uncomment the following giscus section, (1) Enable Discussions in your GitHub repository, 
+# (2) Install the giscus app in your repository (details at https://giscus.app),
+# (3) Fill in *all* the parameters below 
+# See more details about giscus and each of the following parameters at https://giscus.app
+#giscus:
+#  hostname: giscus.app # Replace with your giscus instance's hostname if self-hosting
+#  repository: # GitHub username/repository eg. "daattali/beautiful-jekyll"
+#  repository-id: # ID of your repository, retrieve this info from https://giscus.app
+#  category: Announcements # Category name of your GitHub Discussion posts
+#  category-id: # ID of your category, retrieve this info from https://giscus.app
+#  mapping: pathname
+#  reactions-enabled: 1
+#  emit-metadata: 0
+#  theme: light
+
+################
 # --- Misc --- #
+################
 
 # Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
+date_format: "%Y/%m/%d"
 
 # Facebook App ID
 #fb_app_id: ""
 
+#################################################################################
 # --- You don't need to touch anything below here (but you can if you want) --- #
+#################################################################################
 
 # Output options (more information on Jekyll's site)
 timezone: "America/Toronto"
@@ -234,5 +295,3 @@ plugins:
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
 
-include:
-  - _*.html
