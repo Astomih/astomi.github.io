@@ -20,9 +20,9 @@ author: astomih
 ###############################################
 
 navbar-links:
-  ABOUT ME: "aboutme"
+  ABOUT: "aboutme"
   WORKS: "works"
-  TECH BLOG: "https://astomih.hatenablog.com/"
+  BLOG: "https://astomih.hatenablog.com/"
   DIARY: "https://astomih.hatenadiary.jp/"
     #  Resources:
     #- Beautiful Jekyll: "https://beautifuljekyll.com"
