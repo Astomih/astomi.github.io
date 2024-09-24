@@ -34,7 +34,7 @@ navbar-links:
 
 # Image to show in the navigation bar - works best with a square image
 # Remove this parameter if you don't want an image in the navbar
-avatar: "/assets/img/astomih.jpg"
+avatar: "/assets/img/astomih.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
 round-avatar: true
@@ -57,7 +57,7 @@ social-network-links:
   github: astomih
   twitter: astomih
 #  patreon: DeanAttali
-  youtube: "@astomih"
+#  youtube: "@astomih"
 #  medium: yourname
 #  reddit: yourname
 #  linkedin: daattali
@@ -251,7 +251,7 @@ date_format: "%Y/%m/%d"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Japan"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/

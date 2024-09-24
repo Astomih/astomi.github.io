@@ -1,10 +1,14 @@
 ---
 layout: page
-title: ABOUT
-subtitle: 
 ---
+# About
+A Software engineer related to Computer Graphics
 
-ツール・CG系のプログラマです。
+![](../assets/img/astomih.png)
 
-好きなもの：
-CG/音楽/PCゲーム/アニメ
+# Like
+CG / PC game / Music / Anime
+
+# Skill
+- C++ / C# / Python / GLSL / HLSL
+- OpenGL / Vulkan / WebGPU / DirectX / Unreal Engine / CUDA
