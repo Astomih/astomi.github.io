@@ -2,9 +2,9 @@
 layout: page
 ---
 # About
-A Software engineer related to Computer Graphics
-
-![](../assets/img/astomih.png)
+A Software engineer related to Computer Graphics in Japan
+![](../assets/img/astomih.png)  
+"astomih" is a unique handle name maybe in the world  
 
 # Like
 CG / PC game / Music / Anime

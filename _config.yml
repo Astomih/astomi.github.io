@@ -41,7 +41,7 @@ round-avatar: true
 
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
-#title-img: /assets/img/astomih.jpg
+title-img: false
 
 
 #####################################
@@ -51,8 +51,7 @@ round-avatar: true
 # Select the social network links that you want to show in the footer.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "astomih@gmail.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
+  email: "astomih.jp@gmail.com"
 #  facebook: 
   github: astomih
   twitter: astomih
