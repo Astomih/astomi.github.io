@@ -4,12 +4,13 @@ title: astomih
 subtitle:
 ---
 <html>
+
 <div style="text-align: center">
-  I like Computer Graphics ... maybe.
-  <h1>WebGPU support check</h1>
-  If you don't see below, it means your browser doesn't support WebGPU 😵‍💫<br>
-  Try running this demo in a browser that <a href="https://caniuse.com/webgpu">supports WebGPU</a>.<br>
-  <canvas width="512" height="512"></canvas>
+  I like Computer Graphics ... maybe.<br>
+  Try here with a browser that <a href="https://caniuse.com/webgpu">supports WebGPU</a>.<br>
+  <!-- Flexible canvas to display the grid -->
+  <canvas width="256" height="256" style="width: auto; height: auto;"></canvas>
+
   <script type="module">
     const GRID_SIZE = 32;
     const UPDATE_INTERVAL = 250;
@@ -174,14 +175,14 @@ subtitle:
 
             // Conway's game of life rules:
             switch activeNeighbors {
-              case 2: { // Active cells with 2 neighbors stay active.
+              case 2u: { // Active cells with 2 neighbors stay active.
                 cellStateOut[i] = cellStateIn[i];
               }
-              case 3: { // Cells with 3 neighbors become or stay active.
-                cellStateOut[i] = 1;
+              case 3u: { // Cells with 3 neighbors become or stay active.
+                cellStateOut[i] = 1u;
               }
               default: { // Cells with < 2 or > 3 neighbors become inactive.
-                cellStateOut[i] = 0;
+                cellStateOut[i] = 0u;
               }
             }
           }
