@@ -1,25 +1,18 @@
----
-layout: base
----
+<!DOCTYPE html>
+<html lang="{{ site.locale }}">
+  
+  {% include head.html %}
 
-<div class="intro-header"></div>
+  <body>
 
-<div role="main" class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  {% if page.before-content %}
-    <div class="before-content">
-      {% for file in page.before-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
+    <section class="main-content">
+      
+      {% include card.html %}
 
-  {{ content }}
+      {{ content }}
 
-  {% if page.after-content %}
-    <div class="after-content">
-      {% for file in page.after-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
+    </section>
+    {% include page-footer.html %}
+
+  </body>
+</html>
