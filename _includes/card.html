@@ -1,67 +1,70 @@
 <div class="card">
-    <h1>
-        {% if site.card != nil and site.card.name != nil %}
-        {{ site.card.name }}
-        {% else %}
-        John Doe
-        {% endif %}
-    </h1>
-    <img class="avatar" src="assets/images/avatar.png" alt="avatar" />
-    <h3>
-        {% if site.card != nil and site.card.titles != nil %}
-        {{ site.card.titles }}
-        {% else %}
-        Software Engineer | Student
-        {% endif %}
-    </h3>
-    <div class="btns">
-        {% if site.profiles != nil and site.profiles.facebook != nil %}
-        <a href="https://www.facebook.com/{{ site.profiles.facebook }}"><img class="icon" id="facebok"
-                src="assets/images/icons/facebook_standard.svg" alt="Facebook" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.linkedin != nil %}
-        <a href="https://www.linkedin.com/{{ site.profiles.linkedin }}"><img class="icon" id="linkedin"
-                src="assets/images/icons/linkedin_standard.svg" alt="LinkedIn" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.github != nil %}
-        <a href="https://github.com/{{ site.profiles.github }}"><img class="icon" id="github"
-                src="assets/images/icons/github_standard.svg" alt="GitHub" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.stackoverflow != nil %}
-        <a href="https://stackoverflow.com/users/{{ site.profiles.stackoverflow }}"><img class="icon" id="stackoverflow"
-                src="assets/images/icons/stackoverflow_standard.svg" alt="StackOverflow"
-                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.instagram != nil %}
-        <a href="https://www.instagram.com/{{ site.profiles.instagram }}"><img class="icon" id="instagram"
-                src="assets/images/icons/instagram_standard.svg" alt="Instagram" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.x != nil %}
-        <a href="https://x.com/{{ site.profiles.x }}"><img class="icon" id="x" src="assets/images/icons/x_standard.svg"
-                alt="X" onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.youtube != nil %}
-        <a href="https://www.youtube.com/{{ site.profiles.youtube }}"><img class="icon" id="youtube"
-                src="assets/images/icons/youtube_standard.svg" alt="YouTube" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.twitch != nil %}
-        <a href="https://www.twitch.tv/{{ site.profiles.twitch }}"><img class="icon" id="twitch"
-                src="assets/images/icons/twitch_standard.svg" alt="Twitch" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.hatenablog != nil %}
-        <a href="{{ site.profiles.hatenablog }}"><img class="icon" id="hatenablog"
-                src="assets/images/icons/hatenablog-logo.svg" alt="HatenaBlog" onmouseenter="highlightIcon(this)"
-                onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-        {% if site.profiles != nil and site.profiles.email != nil %}
-        <a href="mailto:{{ site.profiles.email }}"><img class="icon" id="email" src="assets/images/icons/email.svg"
-                alt="email" onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
-        {% endif %}
-    </div>
+        <img class="avatar" src="assets/images/avatar.png" alt="avatar" />
+        <h1>
+                {% if site.card != nil and site.card.name != nil %}
+                {{ site.card.name }}
+                {% else %}
+                John Doe
+                {% endif %}
+        </h1>
+        <h3>
+                {% if site.card != nil and site.card.titles != nil %}
+                {{ site.card.titles }}
+                {% else %}
+                Software Engineer | Student
+                {% endif %}
+        </h3>
+        <div class="btns">
+                {% if site.profiles != nil and site.profiles.facebook != nil %}
+                <a href="https://www.facebook.com/{{ site.profiles.facebook }}"><img class="icon" id="facebok"
+                                src="assets/images/icons/facebook_standard.svg" alt="Facebook"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.linkedin != nil %}
+                <a href="https://www.linkedin.com/{{ site.profiles.linkedin }}"><img class="icon" id="linkedin"
+                                src="assets/images/icons/linkedin_standard.svg" alt="LinkedIn"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.github != nil %}
+                <a href="https://github.com/{{ site.profiles.github }}"><img class="icon" id="github"
+                                src="assets/images/icons/github_standard.svg" alt="GitHub"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.stackoverflow != nil %}
+                <a href="https://stackoverflow.com/users/{{ site.profiles.stackoverflow }}"><img class="icon"
+                                id="stackoverflow" src="assets/images/icons/stackoverflow_standard.svg"
+                                alt="StackOverflow" onmouseenter="highlightIcon(this)"
+                                onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.instagram != nil %}
+                <a href="https://www.instagram.com/{{ site.profiles.instagram }}"><img class="icon" id="instagram"
+                                src="assets/images/icons/instagram_standard.svg" alt="Instagram"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.x != nil %}
+                <a href="https://x.com/{{ site.profiles.x }}"><img class="icon" id="x"
+                                src="assets/images/icons/x_standard.svg" alt="X" onmouseenter="highlightIcon(this)"
+                                onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.youtube != nil %}
+                <a href="https://www.youtube.com/{{ site.profiles.youtube }}"><img class="icon" id="youtube"
+                                src="assets/images/icons/youtube_standard.svg" alt="YouTube"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.twitch != nil %}
+                <a href="https://www.twitch.tv/{{ site.profiles.twitch }}"><img class="icon" id="twitch"
+                                src="assets/images/icons/twitch_standard.svg" alt="Twitch"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.hatenablog != nil %}
+                <a href="{{ site.profiles.hatenablog }}"><img class="icon" id="hatenablog"
+                                src="assets/images/icons/hatenablog-logo.svg" alt="HatenaBlog"
+                                onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+                {% if site.profiles != nil and site.profiles.email != nil %}
+                <a href="mailto:{{ site.profiles.email }}"><img class="icon" id="email"
+                                src="assets/images/icons/email.svg" alt="email" onmouseenter="highlightIcon(this)"
+                                onmouseleave="normalizeIcon(this)" /></a>
+                {% endif %}
+        </div>
 </div>

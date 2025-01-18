@@ -1,7 +1,4 @@
-body {
-	display: flex;
-	flex-direction: column;
-}
+body {}
 
 footer {
 	position: absolute;
@@ -13,13 +10,19 @@ footer {
 	justify-content: center;
 }
 
+.parent {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
 .main-content {
 	text-transform: none;
 	width: 700px;
 	max-width: 90%;
 	display: inline-block;
 	align-self: center;
-	margin-top: 12.5%;
 	text-align: center;
 	box-shadow: 3px 7px 15px 0 rgba(0, 0, 0, 0.7), 5px 10px 20px 0 rgba(0, 0, 0, 0.5);
 }
@@ -50,7 +53,7 @@ a:hover {
 
 .icon {
 	margin: 20px;
-	width: 50px;
+	width: 30px;
 	filter: grayscale(100%) drop-shadow(0 0 0.3rem rgb(43, 42, 51));
 }
 
