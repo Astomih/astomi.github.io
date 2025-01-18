@@ -3,11 +3,11 @@ body {}
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 95%;
+	width: 90%;
 	margin: 20px;
 	display: flex;
 	min-height: 20px;
-	justify-content: center;
+	justify-content: right;
 }
 
 .parent {
