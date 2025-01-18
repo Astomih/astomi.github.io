@@ -6,6 +6,7 @@
         John Doe
         {% endif %}
     </h1>
+    <img class="avatar" src="assets/images/avatar.png" alt="avatar" />
     <h3>
         {% if site.card != nil and site.card.titles != nil %}
         {{ site.card.titles }}
@@ -62,6 +63,5 @@
         <a href="mailto:{{ site.profiles.email }}"><img class="icon" id="email" src="assets/images/icons/email.svg"
                 alt="email" onmouseenter="highlightIcon(this)" onmouseleave="normalizeIcon(this)" /></a>
         {% endif %}
-
     </div>
 </div>
